@@ -7,12 +7,12 @@ int main()
     cin>>node>>edge;
     vector<int>vec[edge];
 
-
     for(int i=0; i<edge; i++)
     {
         cin>>n>>m;
-        vec[n].push_back(m);
+        vec[m].push_back(n);
     }
+
     cout<<endl<<" GRAPH "<<endl;
     for(int i=0; i<node; i++)
     {
@@ -21,17 +21,15 @@ int main()
         {
             cout<<vec[i][j]<<" -> ";
             a[i][vec[i][j]]=1;
-           //cout<<vec[i][j]<<" ";
         }
         cout<<endl;
     }
+
     cout<<endl<<" MATRIX "<<endl;
     for(int i=0; i<node; i++)
     {
-
         for(int j=0; j<node; j++)
         {
-           // cout<<a[i][j]<<" ";
             if(a[i][j] == 1)
             {
                 cout<<"1 ";
@@ -40,7 +38,6 @@ int main()
             {
                 cout<<"0 ";
             }
-
         }
         cout<<endl;
     }
@@ -53,10 +50,10 @@ int main()
 
 /*
 7 11
-0 1
-0 2
-0 3
+1 6
+2 6
 1 3
+1 6
 2 3
 1 5
 3 4
